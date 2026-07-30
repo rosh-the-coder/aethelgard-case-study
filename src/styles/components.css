@@ -1,0 +1,335 @@
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(14px);
+  background: rgba(12, 11, 10, 0.78);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(100% - 2.5rem, var(--max));
+  margin-inline: auto;
+}
+
+.site-nav__brand {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.site-nav__meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.site-nav__meta a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.site-nav__meta a:hover {
+  color: var(--accent);
+}
+
+.disclosure {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  margin-top: var(--space-5);
+}
+
+.disclosure + .disclosure {
+  margin-top: var(--space-3);
+}
+
+.disclosure__summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1.05rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.disclosure__summary::-webkit-details-marker {
+  display: none;
+}
+
+.disclosure__summary::after {
+  content: '+';
+  color: var(--accent);
+  font-size: 1.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.disclosure[open] .disclosure__summary::after {
+  content: '–';
+}
+
+.disclosure__body {
+  padding: 0 1.2rem 1.2rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--line);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.disclosure__body p {
+  margin: 1rem 0 0;
+  max-width: none;
+}
+
+.disclosure__body ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.figure {
+  margin: 0;
+  position: relative;
+}
+
+.figure img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  background: var(--bg-soft);
+}
+
+.figure figcaption {
+  margin-top: 0.7rem;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: var(--text-dim);
+}
+
+.placeholder {
+  aspect-ratio: 16 / 10;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius-md);
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 8px,
+      rgba(197, 168, 128, 0.03) 8px,
+      rgba(197, 168, 128, 0.03) 16px
+    ),
+    var(--bg-soft);
+  color: var(--text-dim);
+}
+
+.placeholder strong {
+  display: block;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.placeholder span {
+  font-size: 0.9rem;
+}
+
+.media-grid {
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.media-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: var(--space-5);
+}
+
+.pill {
+  border: 1px solid var(--line);
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 900px) {
+  .media-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-nav__inner {
+    width: min(100% - 1.5rem, var(--max));
+  }
+}
+
+@media (max-width: 560px) {
+  .media-grid,
+  .media-grid--2 {
+    grid-template-columns: 1fr;
+  }
+
+  .site-nav__meta .hide-sm {
+    display: none;
+  }
+}
+
+/* Product figures */
+.product-figure {
+  margin: 0;
+}
+
+.product-figure__frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(145deg, rgba(197, 168, 128, 0.08), transparent 40%),
+    var(--bg-soft);
+  aspect-ratio: 16 / 10;
+}
+
+.product-figure--support .product-figure__frame {
+  aspect-ratio: 4 / 3;
+}
+
+.product-figure--panel .product-figure__frame {
+  aspect-ratio: 16 / 10;
+  max-height: 14rem;
+}
+
+.product-figure__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-figure__slot {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 0.35rem;
+  text-align: center;
+  padding: 1.25rem;
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(197, 168, 128, 0.04) 10px,
+      rgba(197, 168, 128, 0.04) 20px
+    );
+}
+
+.product-figure__slot-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--text);
+}
+
+.product-figure__slot-file {
+  font-family: ui-monospace, monospace;
+  font-size: 0.82rem;
+  color: var(--accent);
+}
+
+.product-figure__slot-meta {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+.product-figure__marks {
+  list-style: none;
+  margin: 0;
+  padding: 0.65rem;
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  max-width: 90%;
+  z-index: 2;
+}
+
+.product-figure__marks li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(12, 11, 10, 0.78);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.product-figure__marks span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.product-figure__marks em {
+  font-style: normal;
+}
+
+.product-figure__caption {
+  display: grid;
+  gap: 0.25rem;
+  margin-top: 0.75rem;
+}
+
+.product-figure__num {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.product-figure__caption strong {
+  font-size: 1.05rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.product-figure__desc {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.product-figure__capture {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+
+.product-figure--featured .product-figure__slot-title {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
