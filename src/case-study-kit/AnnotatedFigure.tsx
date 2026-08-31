@@ -1,4 +1,5 @@
-import { useId, useState } from 'react'
+import { useEffect, useId, useState } from 'react'
+import { resolveScreenSrc, screenBasenameFromFilename } from '../lib/resolveScreen'
 import type { AnnotatedFigureProps } from './types'
 
 export function AnnotatedFigure({
@@ -15,13 +16,35 @@ export function AnnotatedFigure({
   size = 'large',
 }: AnnotatedFigureProps) {
   const [open, setOpen] = useState<number | null>(null)
+  const [resolved, setResolved] = useState<string | null>(src && status === 'real' ? src : null)
   const id = useId()
+
+  useEffect(() => {
+    if (src && status === 'real') {
+      setResolved(src)
+      return
+    }
+    const base = filename ? screenBasenameFromFilename(filename) : null
+    if (!base) {
+      setResolved(null)
+      return
+    }
+    let cancelled = false
+    resolveScreenSrc(base).then((url) => {
+      if (!cancelled) setResolved(url)
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [src, status, filename])
+
+  const showImage = Boolean(resolved)
 
   return (
     <figure className={`csk-figure csk-figure--${size}`}>
       <div className="csk-figure__stage">
-        {src && status === 'real' ? (
-          <img src={src} alt={alt} loading="lazy" decoding="async" />
+        {showImage ? (
+          <img src={resolved!} alt={alt} loading="lazy" decoding="async" />
         ) : (
           <div className="csk-figure__slot" role="img" aria-label={alt}>
             <strong>{title}</strong>

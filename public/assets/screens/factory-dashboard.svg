@@ -1,0 +1,15 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-label="Factory Dashboard placeholder">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#161412"/>
+      <stop offset="100%" stop-color="#0c0b0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#g)"/>
+  <rect x="48" y="48" width="220" height="804" rx="12" fill="#1e1b18" stroke="#2e2a24"/>
+  <rect x="300" y="48" width="1092" height="72" rx="12" fill="#1e1b18" stroke="#2e2a24"/>
+  <rect x="300" y="148" width="1092" height="704" rx="16" fill="#161412" stroke="#c5a880" stroke-opacity="0.25"/>
+  <text x="720" y="470" text-anchor="middle" fill="#c5a880" font-family="Georgia, serif" font-size="42">Factory Dashboard</text>
+  <text x="720" y="520" text-anchor="middle" fill="#857868" font-family="ui-monospace, monospace" font-size="18">factory-dashboard.webp</text>
+  <text x="720" y="560" text-anchor="middle" fill="#6f6a60" font-family="system-ui, sans-serif" font-size="16">Drop real capture here to replace</text>
+</svg>

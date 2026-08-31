@@ -5,6 +5,9 @@
 export { CaseStudyHero } from './CaseStudyHero'
 export { ProductTour } from './ProductTour'
 export { FactoryDiagram } from './FactoryDiagram'
+export { AliveFactory } from './AliveFactory'
+export { SignatureFactory } from './SignatureFactory'
+export { SystemMorph } from './SystemMorph'
 export { WorkflowComparison } from './WorkflowComparison'
 export { AnnotatedFigure } from './AnnotatedFigure'
 export { DiagramCallout } from './DiagramCallout'
@@ -23,3 +26,4 @@ export type {
   EvidenceItem,
   ProcessTimelineItem,
 } from './types'
+export type { SignatureNode, SignatureNodeKind } from './SignatureFactory'

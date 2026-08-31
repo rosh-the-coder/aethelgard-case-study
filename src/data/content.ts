@@ -36,7 +36,7 @@ export const summary = {
 }
 
 export const act1 = {
-  eyebrow: 'Act 1 · The problem',
+  eyebrow: 'The fragmented workflow',
   question: 'What did one Etsy listing actually require?',
   title: 'A fragmented toolchain — not a product system.',
   intro:
@@ -73,7 +73,7 @@ export const act1 = {
 }
 
 export const act2 = {
-  eyebrow: 'Act 2 · The idea',
+  eyebrow: 'The digital factory',
   statement: 'I wanted to manufacture digital products, not manually assemble them.',
   beforeLabel: 'Before',
   afterLabel: 'After',
@@ -85,7 +85,7 @@ export const act2 = {
 }
 
 export const act3 = {
-  eyebrow: 'Act 3 · How Aethelgard thinks',
+  eyebrow: 'The software',
   question: 'How does one concept become a reviewable draft?',
   title: 'A factory with coordinated stations.',
   intro:
@@ -255,7 +255,7 @@ export const act3 = {
 }
 
 export const act4 = {
-  eyebrow: 'Act 4 · Acquisition',
+  eyebrow: 'Engineering the system',
   question: 'How does artwork enter the factory?',
   title: 'Three intake modes. One downstream pipeline.',
   intro: 'Mode choice changes acquisition rules — not the rest of the factory.',
@@ -295,7 +295,7 @@ export const act4 = {
 }
 
 export const act5 = {
-  eyebrow: 'Act 5 · Mockup subsystem',
+  eyebrow: 'Engineering the system',
   question: 'Why did early mockups look fake?',
   title: 'One station: perspective, light, and glass — not the whole factory.',
   lead: 'I was recreating the Photoshop workflow I already knew, except the computer performed every step automatically.',
@@ -361,7 +361,7 @@ export const act5 = {
 }
 
 export const act6 = {
-  eyebrow: 'Act 6 · Contracts & marketplace',
+  eyebrow: 'Engineering the system',
   question: 'What keeps generative chaos from shipping?',
   title: 'Models propose. Code enforces. Humans approve.',
   intro: 'Deterministic contracts wrap AI. The marketplace path uses the official API — not the Seller Manager DOM.',
@@ -399,7 +399,7 @@ export const act6 = {
 }
 
 export const act7 = {
-  eyebrow: 'Act 7 · Evidence & evolution',
+  eyebrow: 'Evidence on disk',
   question: 'What exists on disk — and what does Git actually prove?',
   title: 'Project artifacts, not commercial performance.',
   intro:
@@ -451,8 +451,8 @@ export const act7 = {
 }
 
 export const act8 = {
-  eyebrow: 'Act 8 · Reflection',
-  title: 'What building the factory taught me.',
+  eyebrow: 'What this changed about how I build',
+  title: 'What this changed about how I build.',
   paragraphs: [
     'Constraints came first: remove repetitive work, avoid a subscription stack, preserve quality, keep final control.',
     'When a method hit a wall, I changed layers — free tiers, bot detection, bad model text. Exact sizes and typography belong to code.',

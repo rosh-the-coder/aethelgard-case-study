@@ -17,6 +17,8 @@ export type ProductTourStep = {
   sentence: string
   caption: string
   callout: string
+  purpose?: string
+  result?: string
   figure: {
     number: string
     title: string

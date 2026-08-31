@@ -1,37 +1,34 @@
 import { SiteNav } from './components/SiteNav'
-import { Act1Fragmented } from './sections/Act1Fragmented'
-import { Act2Idea } from './sections/Act2Idea'
-import { Act3System } from './sections/Act3System'
-import { Act4Acquisition } from './sections/Act4Acquisition'
-import { Act5Mockup } from './sections/Act5Mockup'
-import { Act6Contracts } from './sections/Act6Contracts'
-import { Act7Evidence } from './sections/Act7Evidence'
-import { Act8Reflection } from './sections/Act8Reflection'
-import { HeroSection, ProductTourSection, SummaryStrip } from './sections/HeroSection'
+import { Act1Problem } from './sections/Act1Problem'
+import { Act2Factory } from './sections/Act2Factory'
+import { Act3Software } from './sections/Act3Software'
+import { Act4Engineering } from './sections/Act4Engineering'
+import { Act5Results } from './sections/Act5Results'
+import { Act6Reflection } from './sections/Act6Reflection'
+import { HeroSection, SummaryStrip } from './sections/HeroSection'
+import { ProductProof } from './sections/ProductProof'
 
 export default function App() {
   return (
     <div className="page">
-      <a className="skip-link" href="#product-tour">
+      <a className="skip-link" href="#product-proof">
         Skip to content
       </a>
       <SiteNav />
       <main>
         <HeroSection />
         <SummaryStrip />
-        <ProductTourSection />
-        <Act1Fragmented />
-        <Act2Idea />
-        <Act3System />
-        <Act4Acquisition />
-        <Act5Mockup />
-        <Act6Contracts />
-        <Act7Evidence />
-        <Act8Reflection />
+        <ProductProof />
+        <Act1Problem />
+        <Act2Factory />
+        <Act3Software />
+        <Act4Engineering />
+        <Act5Results />
+        <Act6Reflection />
       </main>
       <footer className="site-footer">
         <div className="container">
-          <span>Aethelgard case study · Interactive visual narrative</span>
+          <span>Aethelgard case study · Digital product factory documentary</span>
           <span>Built for integration into theonlyrosh.com</span>
         </div>
       </footer>

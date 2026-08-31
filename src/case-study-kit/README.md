@@ -11,6 +11,7 @@ Reusable storytelling components for portfolio case studies (Aethelgard, CareerO
 | `ProductTour` | Keynote-style product screens |
 | `WorkflowComparison` | Before/after system infographic |
 | `FactoryDiagram` | Signature manufacturing map |
+| `AliveFactory` | Animated station pipeline |
 | `AnnotatedFigure` | Figure + numbered hotspots |
 | `DiagramCallout` | Tiny labelled note |
 | `EvidenceGrid` | Big numbers + mosaic |
@@ -40,7 +41,16 @@ import './case-study-kit/kit.css'
 
 Pass project-specific content via props. Do not bake Aethelgard copy into the kit.
 
-## Design tokens
+## Drop-in screenshots
+
+Place captures in `public/assets/screens/` using the figure basename:
+
+- `dashboard-overview.webp` (or `.png` / `.jpg` / `.svg`)
+- `research-screen.webp`
+- `generation-screen.webp`
+- …
+
+`AnnotatedFigure` auto-resolves the first matching file. SVG placeholders ship by default so the page never looks empty.
 
 Kit reads CSS variables when present:
 

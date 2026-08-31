@@ -996,3 +996,13 @@
     font-size: 0.75rem;
   }
 }
+
+.section--proof .csk-figure--hero {
+  margin-top: 1.5rem;
+}
+
+.proof-note {
+  margin: -0.5rem 0 0;
+  font-size: 0.88rem;
+  color: var(--text-dim, #857868);
+}
